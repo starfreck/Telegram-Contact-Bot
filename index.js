@@ -9,11 +9,6 @@
  // Read Bot Token From Env
  const bot = new Telegraf(process.env.BOT_TOKEN)
 
- // Set the bot response
- bot.on('text', ({
-     replyWithHTML
- }) => replyWithHTML('<b>Hello</b>'))
-
  // Set telegram webhook
  // npm install -g localtunnel && lt --port 3000
  bot.telegram.setWebhook(`http://localhost/${process.env.BOT_TOKEN}`)
