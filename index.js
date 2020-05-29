@@ -10,8 +10,7 @@
  const bot = new Telegraf(process.env.BOT_TOKEN)
 
  // Set telegram webhook
- // npm install -g localtunnel && lt --port 3000
- bot.telegram.setWebhook(`http://localhost/${process.env.BOT_TOKEN}`)
+ bot.telegram.setWebhook(`${process.env.URL}:${process.env.PORT}/${process.env.BOT_TOKEN}`)
 
  const app = express()
 
